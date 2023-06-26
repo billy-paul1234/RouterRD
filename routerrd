@@ -40,7 +40,7 @@ then
 				echo "Please setup your mailserver" 
 	
 			else
-				echo "Router 1 is DOWN. Now router 2 is UP. Date & Time: \n$(date)" | mail -s "RouterRD" $mailid 
+				echo "Router 1 is DOWN. Now router 2 is UP. Date & Time: $(date)" | mail -s "RouterRD" $mailid 
 	       			#echo "Sending mail.." 
 				[ $# -ne 2  ] && date $timeformat > $tmp
 			fi
