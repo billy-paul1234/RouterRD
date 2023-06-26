@@ -1,0 +1,115 @@
+#!/bin/bash
+##  routerrd --> Router Redundancy Detector
+##  program to email to the network admin if a router fails
+
+
+if [ $# -eq 4 -o $# -eq 2  ]
+then
+	timeinterval=9999
+	router1=$(ping $1 -q -c 3 | grep loss | awk '{print $4}')
+	router2=$(ping $2 -q -c 3 | grep loss | awk '{print $4}')
+	[ $# -eq 2 ] && mailtime=9999 || mailtime=$3
+	timeformat="+%$4"
+	mailid=$(cat /etc/ssmtp/ssmtp.conf | grep AuthUser);mailid=${mailid:9}
+	tmp="/var/routerrd/mail-sent-time.txt"
+	#echo $mailid
+	#if [ [ "$router1" == "0" || "$router2" == "0"   &&   $# -ne 2 ] ]
+        [ $# -ne 2 ] && if [ "$router1" == '0' -o "$router2" == '0' ]
+	then
+		currenttime=$(( $( date $timeformat | sed 's/^0*//' )))
+		mailsenttime=$(( $( cat $tmp | sed 's/^0*//' )))
+	
+		[ $mailsenttime -eq 9999 ] && timeinterval=9999 || timeinterval=$(($currenttime -  $mailsenttime))
+		[ $timeinterval -lt 0  ] && timeinterval=$((($mailsenttime + $timeinterval) + (60 - $mailsenttime)))
+		#echo currenttime = $currenttime
+		#echo mailsenttime = $mailsenttime
+		#echo timeinterval = $timeinterval
+	fi
+
+	#echo "------------------------"
+	#echo $router1 "<--router 1"
+	#echo $router2 "<--Router 2"
+	#echo --------------------------
+	
+
+	#This condition works, when router 1 is DOWN and router 2 is UP.
+	if [ "$router1" == "0" -a "$router2" != "0" ]
+	then
+		[ $timeinterval -ge $mailtime -o $timeinterval -eq 9999  ] && if [ "$mailid" == ""  ] 
+			then 
+				echo "Please setup your mailserver" 
+	
+			else
+				echo "Router 1 is DOWN. Now router 2 is UP. Date & Time: \n$(date)" | mail -s "RouterRD" $mailid 
+	       			#echo "Sending mail.." 
+				[ $# -ne 2  ] && date $timeformat > $tmp
+			fi
+        
+	#This condition works, when Two router is also DOWN
+	elif [ "$router2" == "0" -a "$router1" == "0"  ]
+	then
+		 [ $timeinterval -ge $mailtime -o $timeinterval -eq 9999  ]  && if [ "$mailid" == ""  ] 
+	 		then 
+				echo "Please Setup your mailserver" 
+			else  
+				echo "Router 2 is also DOWN. There is no Internet connection. Date & Time: $(date)" | mail -s "RouterRD" $mailid 
+				#echo "Sending mail.."   
+				[ $# -ne 2  ] && date $timeformat > $tmp
+			 fi
+
+	# This condition works, when router 1 is UP and router 2 is DOWN
+	elif [ "$router2" ==  "0" -a "$router1" != "0"  ]
+	then
+	        [ $timeinterval -ge $mailtime -o $timeinterval -eq 9999  ] && if [ "$mailid" == ""  ] 
+	       		then
+				echo 'Please setup your mailserver' 
+			else
+				#echo "Sending mail..."
+				echo "Router 2 is DOWN but Router 1 is UP. Date & Time: $(date)" | mail -s "RouterRD" $mailid 
+			       	[ $# -ne 2  ] && date $timeformat > $tmp
+			fi
+
+	#This Works when two router is also UP
+	else
+		#echo "Router is Not chandged"
+		[ $# -ne 2  ]  && echo 9999 > $tmp
+	fi
+else
+	echo
+	echo "
+routerrd --> RRD(Router Redundency Detector)
+routerrd --> command is used to detect the router state which uses HSRP(Hot Standby Routing Protocol) and send mail if any router is down
+
+Usage:     
+	   routerrd  [ R1-ip ]    [ R2-ip ]
+Example:
+           routerrd 192.168.1.2  192.168.1.3	            
+R1-ip  -->  Router 1 ip address
+R2-ip  -->  Router 2 ip address
+
+If you want to check your router state for each minute, add the line like bellow example by typing the command ( sudo crontab -e  )
+Don't forget to customize your ip and time
+
+Syntax:     
+         * * * * * routerrd   [ R1-ip ]     [ R2-ip ]    [ TI ]  [ 'M' or 'S' ]
+Example:
+         * * * * * routerrd  192.168.1.2   192.168.1.3     20       'M'
+         * * * * * routerrd  192.168.1.2   192.168.1.3     50       'S'
+
+TI       -->  Time interval to send mail if the router is still down
+              For Minute use ( 2 - 58 )
+	      For Seconds Use ( 10 - 50 )
+'M'      -->  Time in minutes
+'S'      -->  Time is seconds
+
+routerrd -h --> to display this discription
+"
+
+fi
+
+
+
+
+
+
+
