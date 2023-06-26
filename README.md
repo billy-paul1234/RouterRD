@@ -46,22 +46,24 @@ RouterRD tool is used to detect the two router state which uses HSRP(Hot Standby
 * `ls`
 * `sudo bash setup.sh`
 
-[+]--Now provide the your Email and router information.
+[+]--Now provide your Email and router information.
 
-[+]--And it will generate a Single line command paste it in crontab.
+[+]--Now it will generate a Single line command and now copy the command and paste it in crontab.
 
 * `sudo crontab -e`
 
-[+]--Now past the command
+[+]--Now select you editor.
+
+[+]--Now past the command and save it.
 
 [+]--Now your router will automatically checked for each minute.
 
-[+]--You can also use it as a command routerrd.
+[+]--You can also use it as a command ( routerrd -h ).
 
 ## USAGE OPTIONS [Kali Linux & Ubuntu] :
 
 ```
-[+]--To use the routerrd command as mannul follow the instruction bellow.
+[+]--To use the ( routerrd ) command as mannul follow the instruction bellow.
 
 Usage:     
            routerrd  [ R1-ip ]    [ R2-ip ]
@@ -79,7 +81,7 @@ Example:
          * * * * * routerrd  192.168.1.2   192.168.1.3     20       'M'
          * * * * * routerrd  192.168.1.2   192.168.1.3     50       'S'
 
-TI       -->  Time interval to send mail if the router is still down
+TI       -->  Timei to send mail if the router is still down
               For Minute use ( 2 - 58 )
               For Seconds Use ( 10 - 50 )
 'M'      -->  Time in minutes
@@ -103,12 +105,11 @@ Comming Soon....
 
 Comming Soon....
 
-## CONNECT WITH US :
+## CONNECT ME IN:
 
-[![Instagram](https://img.shields.io/badge/INSTAGRAM-FOLLOW-red?style=for-the-badge&logo=instagram)]<!--(https://rebrand.ly/insgrm)-->
-[![Instagram](https://img.shields.io/badge/LINKEDIN-CONNECT-red?style=for-the-badge&logo=linkedin)]<!--(https://rebrand.ly/linkedinprof)-->
-[![Instagram](https://img.shields.io/badge/FACEBOOK-LIKE-red?style=for-the-badge&logo=facebook)]<!--(https://rebrand.ly/fsbpage)-->
-[![Instagram](https://img.shields.io/badge/TELEGRAM-CHANNEL-red?style=for-the-badge&logo=telegram)]<!--(https://rebrand.ly/telegramchnl)-->
+[![Instagram](https://img.shields.io/badge/LINKEDIN-CONNECT-red?style=for-the-badge&logo=linkedin)](https://in.linkedin.com/in/billy-paul-913459270)
+<!--[![Instagram](https://img.shields.io/badge/FACEBOOK-LIKE-red?style=for-the-badge&logo=facebook)]<!--(https://rebrand.ly/fsbpage)
+[![Instagram](https://img.shields.io/badge/TELEGRAM-CHANNEL-red?style=for-the-badge&logo=telegram)]<!--(https://rebrand.ly/telegramchnl)
 [![Instagram](https://img.shields.io/badge/WHATSAPP-JOINGROUP-red?style=for-the-badge&logo=whatsapp)]<!--(https://rebrand.ly/hckrgroups)-->
 
 
