@@ -4,7 +4,7 @@ Router Redundancy Detector
 
 ## ABOUT TOOL :
 
-RouterRD command is used to detect the two router state which uses HSRP(Hot Standby Routing Protocol) and send Email if any router is down.
+RouterRD tool is used to detect the two router state which uses HSRP(Hot Standby Routing Protocol) and send Email if any router is down.
 
 ## AVAILABLE ON :
 
