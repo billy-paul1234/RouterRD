@@ -26,7 +26,11 @@ RouterRD tool is used to detect the two router state which uses HSRP(Hot Standby
 * Gmail App Password
 
 ## FEATURES :
-* [+] Ping two Routers and send Email if any Router down.
+[+]--Ping two Routers and send Email if any Router down.
+
+[+]--It will accurately identifies and notifies you in real-time.
+
+[+]--Customization of Email sent time
 
 ## INSTALLATION [Kali Linux & Ubuntu] :
 [+]--Note:- Don't delete any of the scripts
