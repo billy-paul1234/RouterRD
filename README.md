@@ -105,13 +105,15 @@ Comming Soon....
 
 Comming Soon....
 
+## OTHER PROJECTS:
+
+<b>[Resume PDF to CSV or JSON](https://github.com/billy-paul1234/ResumePdfToJsonOrCsv)</b>
+
 ## CONNECT ME IN:
 
-[![Instagram](https://img.shields.io/badge/LINKEDIN-CONNECT-red?style=for-the-badge&logo=linkedin)](https://in.linkedin.com/in/billy-paul-913459270)
-<!--[![Instagram](https://img.shields.io/badge/FACEBOOK-LIKE-red?style=for-the-badge&logo=facebook)]<!--(https://rebrand.ly/fsbpage)
-[![Instagram](https://img.shields.io/badge/TELEGRAM-CHANNEL-red?style=for-the-badge&logo=telegram)]<!--(https://rebrand.ly/telegramchnl)
-[![Instagram](https://img.shields.io/badge/WHATSAPP-JOINGROUP-red?style=for-the-badge&logo=whatsapp)]<!--(https://rebrand.ly/hckrgroups)-->
+[![Instagram](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://in.linkedin.com/in/billy-paul-913459270)
 
+[![Instagram](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:billypaul388@gmail.com)
 
 ## WARNING : 
 ***This tool is only tested on Kali Linux and Ubuntu with GNS3 emulator.***
