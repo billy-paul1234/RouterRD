@@ -1,6 +1,8 @@
 #!/bin/bash
-##  routerrd --> Router Redundancy Detector
-##  program to email to the network admin if a router fails
+#Title........: Router Redundancy Detector
+#Description..: program to email to the network admin if a router fails
+#Author.......: billy-paul1234
+#Usage........: bash routerrd
 
 
 if [ $# -eq 4 -o $# -eq 2  ]
