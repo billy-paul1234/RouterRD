@@ -91,7 +91,7 @@ TI       -->  Timei to send mail if the router is still down
 'M'      -->  Time in minutes
 'S'      -->  Time is seconds
 
-routerrd -h --> to display this discription
+routerrd -h --> to display this usage options
 
 ```
 
