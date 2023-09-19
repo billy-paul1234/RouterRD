@@ -96,7 +96,12 @@ routerrd -h --> to display this usage options
 
 ## SCREEN SHOTS [GNS3]
 
-Comming Soon....
+<br>
+<p align="center">
+<img width="50%" src="https://user-images.githubusercontent.com/137751689/268995469-13f84d63-732d-46d5-9e43-37e018989f6a.jpg"/> <br>
+<img width="90%" src="https://user-images.githubusercontent.com/137751689/268997229-85325042-a4b1-42f5-87ab-7a54587767db.png"/>
+</p>
+
 
 ## OTHER PROJECTS:
 
