@@ -110,4 +110,4 @@ Comming Soon....
 [![Instagram](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:billypaul388@gmail.com)
 
 ## WARNING : 
-***This tool is only tested on Kali Linux and Ubuntu with GNS3 emulator.***
+***This tool is only tested on Kali Linux and Ubuntu with GNS3 emulator..***
