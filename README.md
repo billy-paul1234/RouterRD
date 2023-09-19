@@ -45,7 +45,6 @@ RouterRD tool is used to detect the two router state which uses HSRP(Hot Standby
 * `sudo apt-get install inetutils-ping -y`
 * `cd $HOME`
 * `git clone https://github.com/billy-paul1234/RouterRD.git`
-* `ls`
 * `cd RouterRD`
 * `ls`
 * `sudo bash setup.sh`
