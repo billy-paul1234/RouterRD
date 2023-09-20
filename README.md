@@ -105,9 +105,12 @@ routerrd -h --> to display this usage options
 
 ## OTHER PROJECTS:
 
-# [arp-kill](https://github.com/billy-paul1234/arp-kill)
-[(Man In The Middle Attack Detection Tool)](https://github.com/billy-paul1234/arp-kill)
 
+## <b>[arp-kill](https://github.com/billy-paul1234/arp-kill)</b> (Man In The Middle Attack Detection Tool)
+
+## <b>[Calculator Vault](https://github.com/billy-paul1234/flutter_calculator_vault)</b> (Calculator Vault App Using Flutter)
+
+## <b>[ResumePdfToJsonOrCsv](https://github.com/billy-paul1234/ResumePdfToJsonOrCsv)</b> ( Convert resume pdf to json or csv )
 
 ## CONNECT ME IN:
 
